@@ -19,10 +19,14 @@ All program are implemented by shell script.
 ```
 # create foleder
 # $path: path of strage directory
+
+path=/path/to/strage
 sh mkdirs.sh $path
 
 # convert your notes and set directry specific path
 # $path: path of strage directory
+
+path=/path/to/strage
 sh backup.sh $path
 
 ```

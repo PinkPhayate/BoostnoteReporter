@@ -23,7 +23,10 @@ for i in  $( seq 0 $(($len - 1)) ); do
   key=$(cat ~/Boostnote/boostnote.json | jq .folders[$i] | jq -r .key)
   color=$(cat ~/Boostnote/boostnote.json | jq .folders[$i] | jq -r .color)
   name=$(cat ~/Boostnote/boostnote.json | jq .folders[$i] | jq -r .name)
-  mkdir "$backup_folder/$name"
+  if [ -ne $backup_folder/$name ]; then
+      mkdir "$backup_folder/$name"
+      echo "$backup_folder/$name"  was created
+  fi
   # キーとフォルダ名のマップを作っておく
   echo $key:$name  >> .tmp
 done

@@ -1,7 +1,7 @@
 #!/bin/bash
-
-# boostnote.jsonから必要なフォルダを作成する
 # フォルダのキーと名前を一時的にファイル保存する
+
+# boostnote.jsonから、Boostnote上に存在しているフォルダと同じものをバックアップ先に作る
 
 # バックアップを記録するフォルダ
 backup_folder=$1
